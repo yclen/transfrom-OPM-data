@@ -9,9 +9,9 @@ import time
 start = time.perf_counter()
 
 #location of volume we wish to transform
-grid = "C:\\Users\\y2cle\\important images\\10um-grid_crop.tif"
+grid = "C:\\Users\\y2cle\\important images\\old grid images\\10um-grid_crop.tif"
 beads = "C:\\Users\\y2cle\\important images\\561nmEx_500nm-beads_0.173-um_y-step.tif"
-bigGrid = "C:\\Users\\y2cle\\important images\\new-10-um-grid_0.5-um-y-step_camera-2.tif"
+# bigGrid = "C:\\Users\\y2cle\\important images\\new-10-um-grid_0.5-um-y-step_camera-2.tif"
 
 #location to save the transformed volume
 save_location = "C:\\Users\\y2cle\\important images\\transformedVol.tif"
@@ -174,9 +174,9 @@ def transform(vol, y_step):
 
 
 #use the transform function (be sure to enter the correct y_step_size!)
-volume = tifffile.imread(bigGrid)
+volume = tifffile.imread(grid)
 y_step_size = 0.5
 
 
-
+print("hi")
 transform(volume, y_step_size)
